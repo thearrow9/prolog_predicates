@@ -30,6 +30,7 @@ test(append_, nondet) :- append_([a, c], [a, b], [a, c, a, b]).
 
 %remove_member
 test(remove_member, nondet) :- remove_member([a], a, []).
+test(remove_member, fail) :- remove_member([a], r, []).
 test(remove_member, nondet) :- remove_member([1, 2, 3, 2, 3, 2], 2, [1, 3, 2, 3, 2]).
 
 :- end_tests(testing).
